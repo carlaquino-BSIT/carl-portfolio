@@ -19,10 +19,6 @@
         <!-- SOCIALS -->
         <div class="mt-8 flex gap-3">
 
-          <a href="https://github.com/carlaquino-BSIT" target="_blank" rel="noopener noreferrer"
-            class="h-10 w-10 flex items-center justify-center rounded-full border border-white/10 bg-white/[0.02] hover:bg-white hover:text-black transition">
-            <i class="ri-github-line text-lg"></i>
-          </a>
 
           <a href="https://www.linkedin.com/in/carl-angelo-aquino" target="_blank" rel="noopener noreferrer"
             class="h-10 w-10 flex items-center justify-center rounded-full border border-white/10 bg-white/[0.02] hover:bg-white hover:text-black transition">
