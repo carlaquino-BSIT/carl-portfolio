@@ -1,7 +1,7 @@
 <template>
   <!-- ================= NAVBAR ================= -->
   <header
-    class="fixed inset-x-0 top-0 z-50 w-full overflow-hidden border-b border-white/10 bg-black/90 backdrop-blur-xl supports-[backdrop-filter]:bg-black/70"
+    class="fixed inset-x-0 top-0 z-[9999] w-full overflow-hidden border-b border-white/10 bg-black/90 backdrop-blur-xl supports-[backdrop-filter]:bg-black/70"
   >
     <nav
       class="mx-auto flex min-h-[64px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
