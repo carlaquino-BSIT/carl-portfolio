@@ -1,10 +1,10 @@
 <template>
   <!-- ================= NAVBAR ================= -->
   <header
-    class="fixed inset-x-0 top-0 z-[9999] w-full overflow-hidden border-b border-white/10 bg-black/90 backdrop-blur-xl supports-[backdrop-filter]:bg-black/70"
+    class="fixed inset-x-0 top-0 z-50 w-full overflow-hidden border-b border-white/10 bg-black/90 backdrop-blur-xl supports-[backdrop-filter]:bg-black/70"
   >
     <nav
-      class="mx-auto flex min-h-[64px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+      class="mx-auto flex min-h-[64px] w-full max-w-6xl items-center justify-between px-5 lg:px-8"
     >
       <!-- LOGO -->
       <div class="flex items-center gap-2 sm:gap-3">
@@ -53,7 +53,6 @@
 
       <!-- MOBILE -->
       <div class="flex items-center gap-2 md:hidden">
-
         <button
           @click="goTo('contact')"
           class="flex h-9 items-center gap-2 rounded-lg border border-white/10 bg-black px-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-zinc-900"
@@ -67,7 +66,6 @@
         >
           <i :class="mobileMenu ? 'ri-close-line' : 'ri-menu-3-line'" />
         </button>
-
       </div>
     </nav>
 
