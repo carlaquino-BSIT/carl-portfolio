@@ -60,12 +60,13 @@
     <transition name="fade">
       <div
         v-if="selectedImage"
-        class="fixed inset-0 z-[70] flex items-center justify-center bg-black/90 backdrop-blur-md px-4"
+        class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-md px-4"
         @click="closeModal"
       >
         <img
           :src="selectedImage"
           class="max-h-[80vh] max-w-[95vw] md:max-w-[90vw] rounded-xl shadow-2xl"
+          @click.stop
         />
       </div>
     </transition>
