@@ -54,10 +54,7 @@
             <i class="ri-arrow-right-up-line transition group-hover:translate-x-1" />
           </button>
 
-          <a href="https://github.com/carlaquino-BSIT" target="_blank" rel="noopener noreferrer"
-            class="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.02] text-base sm:text-lg transition hover:-translate-y-1 hover:bg-white hover:text-black">
-            <i class="ri-github-line" />
-          </a>
+          
 
           <a href="https://www.linkedin.com/in/carl-angelo-aquino" target="_blank" rel="noopener noreferrer"
             class="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.02] text-base sm:text-lg transition hover:-translate-y-1 hover:bg-white hover:text-black">
