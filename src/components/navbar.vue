@@ -12,7 +12,7 @@
           class="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-md border border-white/10 bg-zinc-900"
         >
           <span
-            class="text-[9px] sm:text-[10px] font-semibold tracking-[0.25em] text-white"
+            class="text-[9px] sm:text-[10px] font-semibold text-white"
           >
             CA
           </span>
