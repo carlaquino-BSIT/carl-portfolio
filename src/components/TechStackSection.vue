@@ -46,7 +46,7 @@
       <div data-aos="fade-left">
 
         <p class="mb-5 sm:mb-6 text-[10px] uppercase tracking-[0.35em] text-white/40">
-          Design Tools
+          Editing Tools
         </p>
 
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
