@@ -54,7 +54,7 @@
             <i class="ri-arrow-right-up-line transition group-hover:translate-x-1" />
           </button>
 
-          <a href="mailto:your-email@example.com"
+          <a href="mailto:carlangeloaquino2502@gmail.com"
             class="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.02] text-base sm:text-lg transition hover:-translate-y-1 hover:bg-white hover:text-black">
             <i class="ri-mail-line"></i>
           </a>
