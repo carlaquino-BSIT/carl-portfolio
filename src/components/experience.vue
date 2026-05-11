@@ -208,12 +208,12 @@ const experience = [
 
 const education = [
   {
-    title: "Bachelor of Science in Information Technology",
+    title: "Bachelor of Science in Information Technology (BSIT)",
     place: "Bulacan Agricultural State College",
     year: "2021 - 2025",
   },
   {
-    title: "Senior High – ICT",
+    title: "Senior High School – Information and Communication Technology (ICT)",
     place: "San Miguel National High School",
     year: "2018 - 2020",
   },
