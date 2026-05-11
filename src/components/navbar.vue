@@ -1,7 +1,7 @@
 <template>
   <!-- ================= NAVBAR ================= -->
   <header
-    class="fixed inset-x-0 top-0 z-50 w-full overflow-hidden border-b border-white/10 bg-black/90 backdrop-blur-xl supports-[backdrop-filter]:bg-black/70"
+    class="fixed inset-x-0 top-0 w-full overflow-hidden border-b border-white/10 bg-black/90 backdrop-blur-xl supports-[backdrop-filter]:bg-black/70 z-[9999]"
   >
     <nav
       class="mx-auto flex min-h-[64px] w-full max-w-6xl items-center justify-between px-5 lg:px-8"
@@ -76,7 +76,6 @@
         class="border-t border-white/10 bg-black/95 backdrop-blur-xl md:hidden"
       >
         <div class="space-y-6 px-5 py-6 text-[11px] uppercase tracking-[0.18em] text-gray-400">
-
           <a @click="goTo('home')" class="block cursor-pointer hover:text-white">Home</a>
           <a @click="goTo('skills')" class="block cursor-pointer hover:text-white">Skills</a>
           <a @click="goTo('techstack')" class="block cursor-pointer hover:text-white">Tech Stack</a>
