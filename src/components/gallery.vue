@@ -3,15 +3,8 @@
 
     <!-- HEADER -->
     <div class="mx-auto max-w-6xl px-5 lg:px-8 mb-10 md:mb-12" data-aos="fade-up">
-
-      <p class="text-[10px] uppercase tracking-[0.35em] text-white/50">
-        Documentation
-      </p>
-
-      <h2 class="mt-2 text-xl md:text-2xl font-bold uppercase tracking-[0.2em]">
-        Gallery
-      </h2>
-
+      <p class="text-[10px] uppercase tracking-[0.35em] text-white/50">Documentation</p>
+      <h2 class="mt-2 text-xl md:text-2xl font-bold uppercase tracking-[0.2em]">Gallery</h2>
     </div>
 
     <!-- CAROUSEL WRAPPER -->
@@ -20,7 +13,7 @@
       <!-- LEFT BUTTON -->
       <button
         @click="prev"
-        class="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 z-10 w-9 md:w-10 h-9 md:h-10 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition"
+        class="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 z-[60] w-9 md:w-10 h-9 md:h-10 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition"
       >
         <i class="ri-arrow-left-s-line text-lg md:text-xl"></i>
       </button>
@@ -28,7 +21,7 @@
       <!-- RIGHT BUTTON -->
       <button
         @click="next"
-        class="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 z-10 w-9 md:w-10 h-9 md:h-10 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition"
+        class="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 z-[60] w-9 md:w-10 h-9 md:h-10 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition"
       >
         <i class="ri-arrow-right-s-line text-lg md:text-xl"></i>
       </button>
@@ -38,7 +31,6 @@
         ref="slider"
         class="flex gap-3 md:gap-4 overflow-hidden scroll-smooth"
       >
-
         <div
           v-for="(img, index) in gallery"
           :key="index"
@@ -47,7 +39,6 @@
           data-aos="zoom-in"
           :data-aos-delay="index * 40"
         >
-
           <!-- IMAGE -->
           <img
             :src="img"
@@ -61,26 +52,21 @@
           <div class="absolute bottom-2 md:bottom-3 left-2 md:left-3 text-[9px] md:text-[10px] uppercase tracking-[0.25em] text-white/60">
             Image {{ index + 1 }}
           </div>
-
         </div>
-
       </div>
-
     </div>
 
     <!-- MODAL -->
     <transition name="fade">
       <div
         v-if="selectedImage"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md px-4"
+        class="fixed inset-0 z-[70] flex items-center justify-center bg-black/90 backdrop-blur-md px-4"
         @click="closeModal"
       >
-
         <img
           :src="selectedImage"
           class="max-h-[80vh] max-w-[95vw] md:max-w-[90vw] rounded-xl shadow-2xl"
         />
-
       </div>
     </transition>
 
@@ -91,19 +77,14 @@
 import { ref } from "vue"
 
 /* AUTO LOAD ALL IMAGES */
-const images = import.meta.glob(
-  "../assets/image/gallery/*.{jpg,jpeg,png,webp}",
-  {
-    eager: true,
-    import: "default"
-  }
-)
-
+const images = import.meta.glob("../assets/image/gallery/*.{jpg,jpeg,png,webp}", {
+  eager: true,
+  import: "default"
+})
 const gallery = Object.values(images)
 
 /* SLIDER */
 const slider = ref(null)
-
 function next() {
   if (slider.value) {
     slider.value.scrollBy({
@@ -112,7 +93,6 @@ function next() {
     })
   }
 }
-
 function prev() {
   if (slider.value) {
     slider.value.scrollBy({
@@ -124,11 +104,9 @@ function prev() {
 
 /* MODAL */
 const selectedImage = ref(null)
-
 function openModal(img) {
   selectedImage.value = img
 }
-
 function closeModal() {
   selectedImage.value = null
 }
@@ -139,7 +117,6 @@ function closeModal() {
 .fade-leave-active {
   transition: opacity 0.3s ease;
 }
-
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
