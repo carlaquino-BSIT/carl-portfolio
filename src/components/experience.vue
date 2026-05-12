@@ -1,6 +1,6 @@
 <template>
   <section id="experience"
-    class="relative border-t border-white/10 bg-black py-20 sm:py-24 text-white overflow-hidden">
+    class="border-t border-white/10 bg-black py-20 sm:py-24 text-white">
 
     <!-- HEADER -->
     <div class="mx-auto mb-14 max-w-6xl px-5 lg:px-8" data-aos="fade-up">
@@ -13,87 +13,73 @@
       </h2>
     </div>
 
-    <!-- ================= EXPERIENCE ================= -->
-    <div class="mx-auto mb-28 max-w-6xl px-5 lg:px-8">
+    <div class="mx-auto max-w-6xl px-5 lg:px-8 grid gap-14 lg:grid-cols-2">
 
-      <p class="mb-8 text-[10px] uppercase tracking-[0.35em] text-white/40">
-        Experience
-      </p>
+      <!-- ================= EXPERIENCE ================= -->
+      <div data-aos="fade-right">
 
-      <div class="grid gap-6 sm:grid-cols-2">
+        <p class="mb-6 text-[10px] uppercase tracking-[0.35em] text-white/40">
+          Experience
+        </p>
 
-        <div
-          v-for="(item, index) in experience"
-          :key="item.title"
-          class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition duration-300 hover:-translate-y-1 hover:border-white/30"
-          data-aos="zoom-in"
-          :data-aos-delay="index * 120"
-        >
+        <div class="space-y-6">
 
-          <!-- top accent line -->
-          <div class="absolute left-0 top-0 h-[2px] w-full bg-white/10 group-hover:bg-white/30 transition"></div>
+          <div
+            v-for="(item, index) in experience"
+            :key="item.title"
+            class="border-l border-white/10 pl-4"
+            data-aos="fade-up"
+            :data-aos-delay="index * 80"
+          >
 
-          <!-- YEAR -->
-          <div class="mb-4 flex items-center justify-between">
-            <span class="text-[10px] uppercase tracking-[0.3em] text-white/50 group-hover:text-white/80 transition">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-white/40">
               {{ item.year }}
-            </span>
+            </p>
 
-            <span class="h-1.5 w-1.5 rounded-full bg-white/30 group-hover:bg-white transition"></span>
+            <h3 class="mt-1 text-sm font-semibold uppercase tracking-[0.15em]">
+              {{ item.title }}
+            </h3>
+
+            <p class="text-xs text-white/60">
+              {{ item.place }}
+            </p>
+
           </div>
-
-          <!-- TITLE -->
-          <h3 class="text-base sm:text-lg font-bold uppercase tracking-[0.15em]">
-            {{ item.title }}
-          </h3>
-
-          <!-- PLACE -->
-          <p class="mt-2 text-xs sm:text-sm text-white/60 group-hover:text-white/80 transition">
-            {{ item.place }}
-          </p>
 
         </div>
 
       </div>
-    </div>
 
-    <!-- ================= EDUCATION ================= -->
-    <div class="mx-auto max-w-6xl px-5 lg:px-8">
+      <!-- ================= EDUCATION ================= -->
+      <div data-aos="fade-left">
 
-      <p class="mb-8 text-[10px] uppercase tracking-[0.35em] text-white/40">
-        Education
-      </p>
+        <p class="mb-6 text-[10px] uppercase tracking-[0.35em] text-white/40">
+          Education
+        </p>
 
-      <div class="space-y-5">
+        <div class="space-y-6">
 
-        <div
-          v-for="(item, index) in education"
-          :key="item.title"
-          class="group relative flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-5 transition hover:-translate-y-1 hover:border-white/30"
-          data-aos="fade-up"
-          :data-aos-delay="index * 100"
-        >
+          <div
+            v-for="(item, index) in education"
+            :key="item.title"
+            class="border-l border-white/10 pl-4"
+            data-aos="fade-up"
+            :data-aos-delay="index * 80"
+          >
 
-          <!-- LEFT -->
-          <div class="space-y-1">
-            <h3 class="text-sm sm:text-base font-bold uppercase tracking-[0.15em]">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-white/40">
+              {{ item.year }}
+            </p>
+
+            <h3 class="mt-1 text-sm font-semibold uppercase tracking-[0.15em]">
               {{ item.title }}
             </h3>
 
-            <p class="text-xs text-white/60 group-hover:text-white/80 transition">
+            <p class="text-xs text-white/60">
               {{ item.place }}
             </p>
-          </div>
 
-          <!-- RIGHT -->
-          <div class="sm:text-right">
-            <span class="inline-block rounded-full border border-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-white/50 group-hover:text-white transition">
-              {{ item.year }}
-            </span>
           </div>
-
-          <!-- left accent line -->
-          <div class="absolute left-0 top-0 h-full w-[2px] bg-white/10 group-hover:bg-white/30 transition"></div>
 
         </div>
 
