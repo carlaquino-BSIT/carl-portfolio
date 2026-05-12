@@ -2,7 +2,10 @@
   <section id="projects" class="bg-black text-white py-20 md:py-24 border-t border-white/10">
 
     <!-- HEADER -->
-    <div class="mx-auto max-w-6xl px-5 lg:px-8 mb-8 md:mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+    <div
+      class="mx-auto max-w-6xl px-5 lg:px-8 mb-8 md:mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+      data-aos="fade-up"
+    >
       <div>
         <p class="text-[10px] uppercase tracking-[0.35em] text-white/50">Selected Work</p>
         <h2 class="mt-2 text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-[0.2em]">
@@ -12,7 +15,11 @@
     </div>
 
     <!-- CATEGORY -->
-    <div class="mx-auto max-w-6xl px-5 lg:px-8 mb-8 flex flex-wrap gap-2 sm:gap-3">
+    <div
+      class="mx-auto max-w-6xl px-5 lg:px-8 mb-8 flex flex-wrap gap-2 sm:gap-3"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
       <button
         v-for="cat in categories"
         :key="cat"
@@ -34,10 +41,13 @@
         class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
       >
 
+        <!-- PROJECT CARD -->
         <div
-          v-for="project in filteredProjects"
+          v-for="(project, index) in filteredProjects"
           :key="project.title"
           class="group relative rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden hover:border-white/30 transition"
+          data-aos="zoom-in"
+          :data-aos-delay="index * 100"
         >
 
           <!-- IMAGE -->
@@ -84,8 +94,7 @@
 
           <!-- CONTENT -->
           <div class="p-5 space-y-3">
-            
-            <!-- PROJECT TYPE (UPDATED) -->
+
             <p class="text-[10px] text-white/40 uppercase tracking-[0.3em]">
               {{ project.projectType }}
             </p>
@@ -116,6 +125,7 @@
       <div
         v-else
         class="flex flex-col items-center justify-center py-28 text-center text-white/50"
+        data-aos="fade-up"
       >
         <h3 class="text-sm uppercase tracking-[0.25em]">No Projects Yet</h3>
       </div>
@@ -130,7 +140,10 @@
         @click.self="closeModal"
       >
 
-        <div class="w-full max-w-xl bg-black border border-white/10 rounded-xl overflow-hidden">
+        <div
+          class="w-full max-w-xl bg-black border border-white/10 rounded-xl overflow-hidden"
+          data-aos="fade-up"
+        >
 
           <!-- HEADER -->
           <div class="flex items-center justify-between p-3 border-b border-white/10">
@@ -232,7 +245,10 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue"
+import { ref, computed, onMounted } from "vue"
+import AOS from "aos"
+import "aos/dist/aos.css"
+
 import uktImg from "../assets/image/project-screenshots/ukt/ukt.webp"
 import uktImg2 from "../assets/image/project-screenshots/ukt/ukt2.jpg"
 import uktImg3 from "../assets/image/project-screenshots/ukt/ukt3.jpg"
@@ -241,6 +257,14 @@ import uktImg5 from "../assets/image/project-screenshots/ukt/ukt5.png"
 import uktImg6 from "../assets/image/project-screenshots/ukt/ukt6.png"
 import sciGamesImg from "../assets/image/project-screenshots/scigames/sciegames.webp"
 import sciGamesImg2 from "../assets/image/project-screenshots/scigames/scigames2.jpg"
+
+onMounted(() => {
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+  })
+})
 
 const categories = ["Website", "Promotions", "Logo", "UI/UX"]
 const selectedCategory = ref("Website")
@@ -279,8 +303,9 @@ const projects = [
     status: "online",
     category: "Website",
     images: [uktImg, uktImg2, uktImg3, uktImg4, uktImg5, uktImg6],
-    tech: ["HTML", "CSS","JavaScript", "Bootstrap", "PHP", "MySQL"],
-    overview: "A university content management system (CMS) website with site settings that allow dynamic updates of colors, text, logo, and background for easy customization and management"
+    tech: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
+    overview:
+      "A university content management system (CMS) website with site settings that allow dynamic updates of colors, text, logo, and background for easy customization and management"
   },
   {
     title: "SCI-GAMES Online Mobile Application",
@@ -288,8 +313,9 @@ const projects = [
     status: "offline",
     category: "Website",
     images: [sciGamesImg2, sciGamesImg],
-    tech: ["HTML", "CSS","JavaScript", "Bootstrap", "PHP", "MySQL", "Median.co"],
-    overview: "A web application capstone project for Grade 8 students of San Ildefonso National High School. It is a module-based science learning game system where gameplay depends on the content of the science modules and can be accessed on any device"
+    tech: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL", "Median.co"],
+    overview:
+      "A web application capstone project for Grade 8 students of San Ildefonso National High School. It is a module-based science learning game system where gameplay depends on the content of the science modules and can be accessed on any device"
   }
 ]
 
