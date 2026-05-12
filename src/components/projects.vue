@@ -104,7 +104,7 @@
             >
               <button
                 @click="openProject(project)"
-                class="px-5 py-2 text-[10px] uppercase tracking-[0.25em] border border-white/40 bg-white text-black rounded-full hover:bg-black hover:text-white transition"
+                class="px-5 py-2 text-[10px] uppercase tracking-[0.25em] border border-white/40 bg-white text-black rounded-lg hover:bg-black hover:text-white transition"
               >
                 View Project
               </button>
@@ -224,7 +224,7 @@
                 v-if="selectedProject.status === 'online'"
                 :href="selectedProject.website"
                 target="_blank"
-                class="px-5 py-2 text-[10px] uppercase tracking-[0.25em] bg-white text-black rounded-full hover:bg-black hover:text-white border border-white/20 transition"
+                class="px-5 py-2 text-[10px] uppercase tracking-[0.25em] bg-white text-black rounded-lg hover:bg-black hover:text-white border border-white/20 transition"
               >
                 View Website
               </a>
@@ -233,17 +233,12 @@
               <button
                 v-else
                 disabled
-                class="px-5 py-2 text-[10px] uppercase tracking-[0.25em] border border-white/10 bg-white/10 text-white/30 rounded-full cursor-not-allowed"
+                class="px-5 py-2 text-[10px] uppercase tracking-[0.25em] border border-white/10 bg-white/10 text-white/30 rounded-lg cursor-not-allowed"
               >
                 Website Offline
               </button>
 
-              <button
-                @click="closeModal"
-                class="px-5 py-2 text-[10px] uppercase tracking-[0.25em] border border-white/20 text-white rounded-full hover:bg-white hover:text-black transition"
-              >
-                Close
-              </button>
+              
             </div>
           </div>
         </div>
