@@ -23,7 +23,7 @@
 
           <div class="flex items-center gap-2 mb-4">
             <span class="w-2 h-2 bg-green-400 rounded-full"></span>
-            <p class="text-[10px] uppercase tracking-[0.35em] text-white/40 font-mono">
+            <p class="text-[10px] uppercase tracking-[0.35em] text-white/40">
               profile.summary
             </p>
           </div>
@@ -76,7 +76,7 @@
 
         <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-8 hover:-translate-y-1 transition">
 
-          <p class="text-[10px] uppercase tracking-[0.4em] text-white/40 mb-6 font-mono">
+          <p class="text-[10px] uppercase tracking-[0.4em] text-white/40 mb-6">
             /focus.area
           </p>
 
@@ -108,7 +108,7 @@
           <!-- STATUS -->
           <div class="mt-8 border border-white/10 rounded-lg p-4 bg-black/40">
 
-            <p class="text-[10px] uppercase tracking-[0.35em] text-white/40 font-mono mb-2">
+            <p class="text-[10px] uppercase tracking-[0.35em] text-white/40 mb-2">
               system.status
             </p>
 
