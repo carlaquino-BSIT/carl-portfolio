@@ -12,7 +12,7 @@
           class="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-md border border-white/10 bg-zinc-900"
         >
           <span
-            class="text-[9px] sm:text-[10px] font-semibold text-white"
+            class="text-[9px] sm:text-[10px] font-semibold  text-white"
           >
             CA
           </span>
@@ -33,8 +33,8 @@
         class="hidden items-center gap-5 lg:gap-7 text-[10px] lg:text-[11px] font-medium uppercase tracking-[0.18em] text-gray-400 md:flex"
       >
         <li><a @click="goTo('home')" class="cursor-pointer hover:text-white">Home</a></li>
+        <li><a @click="goTo('about')" class="cursor-pointer hover:text-white">About</a></li>
         <li><a @click="goTo('skills')" class="cursor-pointer hover:text-white">Skills</a></li>
-        <li><a @click="goTo('techstack')" class="cursor-pointer hover:text-white">Technologies & Tools</a></li>
         <li><a @click="goTo('experience')" class="cursor-pointer hover:text-white">Background</a></li>
         <li><a @click="goTo('projects')" class="cursor-pointer hover:text-white">Projects</a></li>
         <li><a @click="goTo('gallery')" class="cursor-pointer hover:text-white">Gallery</a></li>
@@ -77,10 +77,9 @@
       >
         <div class="space-y-6 px-5 py-6 text-[11px] uppercase tracking-[0.18em] text-gray-400">
           <a @click="goTo('home')" class="block cursor-pointer hover:text-white">Home</a>
+          <a @click="goTo('about')" class="block cursor-pointer hover:text-white">about</a>
           <a @click="goTo('skills')" class="block cursor-pointer hover:text-white">Skills</a>
-          <a @click="goTo('techstack')" class="block cursor-pointer hover:text-white">Tech Stack</a>
-          <a @click="goTo('education')" class="block cursor-pointer hover:text-white">Education</a>
-          <a @click="goTo('experience')" class="block cursor-pointer hover:text-white">Experience</a>
+          <a @click="goTo('experience')" class="block cursor-pointer hover:text-white">Background</a>
           <a @click="goTo('projects')" class="block cursor-pointer hover:text-white">Projects</a>
           <a @click="goTo('gallery')" class="block cursor-pointer hover:text-white">Gallery</a>
         </div>
