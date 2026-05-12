@@ -15,7 +15,7 @@
     <!-- CONTENT -->
     <div class="mx-auto max-w-6xl px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-      <!-- LEFT: TEXT -->
+      <!-- LEFT -->
       <div data-aos="fade-right">
 
         <!-- INTRO CARD -->
@@ -29,18 +29,17 @@
           </div>
 
           <p class="text-sm sm:text-base leading-relaxed text-white/70">
-            I am a <span class="text-white font-semibold">Bachelor of Science in Information Technology graduate</span>
-            from BASC, with a strong interest in building and supporting digital systems.
+            I focus on building practical and efficient digital solutions, with interest in both technical and support-related IT work.
           </p>
 
           <p class="mt-5 text-sm sm:text-base leading-relaxed text-white/60">
-            I am currently looking for opportunities in the IT field where I can apply my skills and gain practical
-            experience. I am open to roles as a <span class="text-white/80 font-medium">developer, IT support, or graphic designer</span>.
+            I am currently looking for opportunities in the IT field where I can contribute to real-world tasks such as system support,
+            technical assistance, IT staff roles, and basic development work. I aim to gain hands-on experience in a professional environment.
           </p>
 
           <p class="mt-5 text-sm sm:text-base leading-relaxed text-white/60">
-            My goal is to grow professionally, improve my technical and creative skills, and contribute to
-            projects that create real impact.
+            I value continuous learning and adaptability as I develop my skills across different areas of Information Technology,
+            including support, troubleshooting, development, and creative digital work.
           </p>
 
         </div>
@@ -48,50 +47,65 @@
         <!-- TAGS -->
         <div class="mt-6 flex flex-wrap gap-2 text-[10px] uppercase tracking-[0.25em] font-mono text-white/60">
 
-          <span class="border border-white/10 px-3 py-1 rounded-full bg-white/[0.02]">web development</span>
-          <span class="border border-white/10 px-3 py-1 rounded-full bg-white/[0.02]">IT support</span>
-          <span class="border border-white/10 px-3 py-1 rounded-full bg-white/[0.02]">graphic design</span>
-          <span class="border border-white/10 px-3 py-1 rounded-full bg-white/[0.02]">continuous learning</span>
+          <span class="border border-white/10 px-3 py-1 rounded-full bg-white/[0.02]">
+            IT Support
+          </span>
+
+          <span class="border border-white/10 px-3 py-1 rounded-full bg-white/[0.02]">
+            IT Staff
+          </span>
+
+          <span class="border border-white/10 px-3 py-1 rounded-full bg-white/[0.02]">
+            Technical Assistance
+          </span>
+
+          <span class="border border-white/10 px-3 py-1 rounded-full bg-white/[0.02]">
+            Graphic Design
+          </span>
+
+          <span class="border border-white/10 px-3 py-1 rounded-full bg-white/[0.02]">
+            Continuous Learning
+          </span>
 
         </div>
 
       </div>
 
-      <!-- RIGHT: SYSTEM CARD -->
+      <!-- RIGHT -->
       <div data-aos="fade-left">
 
         <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-8 hover:-translate-y-1 transition">
 
           <p class="text-[10px] uppercase tracking-[0.4em] text-white/40 mb-6 font-mono">
-            /career.status
+            /focus.area
           </p>
 
           <div class="space-y-6 text-sm">
 
             <div class="border-l border-green-400 pl-4">
-              <p class="text-white font-semibold">IT Roles</p>
+              <p class="text-white font-semibold">Professional Growth</p>
               <p class="text-white/60 text-xs mt-1">
-                Open to work as a developer, IT support, or graphic designer to gain experience and grow.
+                Building experience through real-world IT environments and technical exposure.
               </p>
             </div>
 
             <div class="border-l border-white/20 pl-4">
-              <p class="text-white font-semibold">Skill Development</p>
+              <p class="text-white font-semibold">Skill Application</p>
               <p class="text-white/60 text-xs mt-1">
-                Focused on learning modern web technologies, IT systems, and creative design tools.
+                Applying technical knowledge to support, systems, and digital tasks.
               </p>
             </div>
 
             <div class="border-l border-white/20 pl-4">
-              <p class="text-white font-semibold">Practical Experience</p>
+              <p class="text-white font-semibold">Career Direction</p>
               <p class="text-white/60 text-xs mt-1">
-                Looking for real-world projects to strengthen both technical and creative experience.
+                Open to opportunities in IT support, IT staff roles, technical assistance, development, and design.
               </p>
             </div>
 
           </div>
 
-          <!-- STATUS BAR -->
+          <!-- STATUS -->
           <div class="mt-8 border border-white/10 rounded-lg p-4 bg-black/40">
 
             <p class="text-[10px] uppercase tracking-[0.35em] text-white/40 font-mono mb-2">
