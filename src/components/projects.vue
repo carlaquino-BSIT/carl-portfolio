@@ -2,108 +2,108 @@
   <section id="projects" class="bg-black text-white py-20 md:py-24 border-t border-white/10">
 
     <!-- HEADER -->
-    <div
-      class="mx-auto max-w-6xl px-5 lg:px-8 mb-8 md:mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
-      data-aos="fade-up"
-    >
+    <div class="mx-auto max-w-6xl px-5 lg:px-8 mb-8 md:mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
       <div>
-        <p class="text-[10px] uppercase tracking-[0.35em] text-white/50">
-          Selected Work
-        </p>
-
+        <p class="text-[10px] uppercase tracking-[0.35em] text-white/50">Selected Work</p>
         <h2 class="mt-2 text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-[0.2em]">
           Projects
         </h2>
       </div>
     </div>
 
-    <!-- CATEGORY NAV -->
+    <!-- CATEGORY -->
     <div class="mx-auto max-w-6xl px-5 lg:px-8 mb-8 flex flex-wrap gap-2 sm:gap-3">
-
       <button
         v-for="cat in categories"
         :key="cat"
         @click="selectedCategory = cat"
-        class="px-3 py-1.5 text-[10px] sm:text-xs uppercase tracking-[0.2em] border rounded-full transition"
+        class="px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] border rounded-full transition"
         :class="selectedCategory === cat
           ? 'bg-white text-black border-white'
           : 'border-white/20 text-white/60 hover:border-white/40 hover:text-white'"
       >
         {{ cat }}
       </button>
-
     </div>
 
-    <!-- GRID OR EMPTY STATE -->
+    <!-- GRID -->
     <div class="mx-auto max-w-6xl px-5 lg:px-8">
 
-      <!-- PROJECT GRID -->
       <div
         v-if="filteredProjects.length > 0"
-        class="grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
       >
 
         <div
           v-for="project in filteredProjects"
           :key="project.title"
-          class="group relative overflow-hidden rounded-2xl border border-white/10
-                 bg-white/[0.02] hover:border-white/30 transition duration-300"
-          data-aos="fade-up"
+          class="group relative rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden hover:border-white/30 transition"
         >
 
           <!-- IMAGE -->
-          <div class="relative h-40 sm:h-48 md:h-52 overflow-hidden">
-
+          <div class="relative h-48 overflow-hidden">
             <img
-              :src="project.image"
-              class="h-full w-full object-cover scale-105 group-hover:scale-110 transition duration-700"
+              :src="project.images[0]"
+              class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
             />
-
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/40"></div>
 
             <!-- STATUS -->
-            <div class="absolute top-3 left-3 z-20">
+            <div class="absolute top-3 left-3 z-10">
               <span
-                class="flex items-center gap-2 px-3 py-1 rounded-full border backdrop-blur-md bg-black/40 text-[9px] uppercase tracking-[0.2em]"
-                :class="project.status === 'online'
-                  ? 'border-green-400 text-green-400'
-                  : 'border-white/30 text-white/60'"
+                class="flex items-center gap-2 px-3 py-1 rounded-full text-[9px] uppercase tracking-widest border border-white/20 bg-black/60 backdrop-blur-md"
+                :class="project.status === 'online' ? 'text-green-400' : 'text-red-400'"
               >
                 <span
-                  class="h-1.5 w-1.5 rounded-full"
-                  :class="project.status === 'online'
-                    ? 'bg-green-400 animate-pulse'
-                    : 'bg-white/40'"
+                  class="h-2 w-2 rounded-full"
+                  :class="project.status === 'online' ? 'bg-green-400 animate-pulse' : 'bg-red-500'"
                 ></span>
 
                 {{ project.status }}
               </span>
             </div>
 
+            <!-- CATEGORY -->
+            <div class="absolute top-3 right-3 z-10">
+              <span class="text-[9px] px-2 py-1 border border-white/10 bg-black/50 text-white/40 uppercase tracking-widest rounded-full">
+                {{ project.category }}
+              </span>
+            </div>
+
+            <!-- VIEW -->
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-black/70 flex items-center justify-center">
+              <button
+                @click="openProject(project)"
+                class="px-4 py-2 text-xs uppercase tracking-widest border border-white/40 bg-white text-black rounded-full"
+              >
+                View Project
+              </button>
+            </div>
+
           </div>
 
           <!-- CONTENT -->
-          <div class="p-4 sm:p-5">
-
-            <p class="text-[10px] font-mono text-white/40 uppercase">
-              {{ project.role }}
+          <div class="p-5 space-y-3">
+            
+            <!-- PROJECT TYPE (UPDATED) -->
+            <p class="text-[10px] text-white/40 uppercase tracking-[0.3em]">
+              {{ project.projectType }}
             </p>
 
-            <h3 class="mt-2 text-base sm:text-lg font-bold uppercase tracking-[0.15em] group-hover:tracking-[0.2em] transition">
+            <h3 class="text-lg font-semibold uppercase tracking-widest">
               {{ project.title }}
             </h3>
 
-            <!-- TECH -->
-            <div class="mt-3 sm:mt-4 flex flex-wrap gap-2">
+            <div class="h-px bg-white/10"></div>
 
+            <div class="flex flex-wrap gap-2">
               <span
                 v-for="tech in project.tech"
                 :key="tech"
-                class="text-[10px] px-2 py-1 border border-white/10 rounded-full text-white/60 group-hover:border-white/30 transition"
+                class="text-[10px] px-2 py-1 border border-white/10 bg-white/5 text-white/60 rounded-md"
               >
                 {{ tech }}
               </span>
-
             </div>
 
           </div>
@@ -112,59 +112,211 @@
 
       </div>
 
-      <!-- EMPTY STATE -->
+      <!-- EMPTY -->
       <div
         v-else
         class="flex flex-col items-center justify-center py-28 text-center text-white/50"
       >
-        <i class="ri-folder-open-line text-5xl mb-4 text-white/20"></i>
-
-        <h3 class="text-sm sm:text-base uppercase tracking-[0.25em]">
-          No Projects Yet
-        </h3>
-
-        <p class="mt-3 text-xs sm:text-sm text-white/30 max-w-md">
-          There are currently no projects under this category.
-        </p>
+        <h3 class="text-sm uppercase tracking-[0.25em]">No Projects Yet</h3>
       </div>
 
     </div>
+
+    <!-- MODAL -->
+    <Transition name="modal">
+      <div
+        v-if="isModalOpen"
+        class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+        @click.self="closeModal"
+      >
+
+        <div class="w-full max-w-xl bg-black border border-white/10 rounded-xl overflow-hidden">
+
+          <!-- HEADER -->
+          <div class="flex items-center justify-between p-3 border-b border-white/10">
+            <h3 class="text-[10px] uppercase tracking-widest text-white/60">
+              Case Study
+            </h3>
+            <button @click="closeModal" class="text-white/40 hover:text-white text-sm">
+              ✕
+            </button>
+          </div>
+
+          <!-- BODY -->
+          <div v-if="selectedProject" class="p-4 space-y-4">
+
+            <div>
+              <p class="text-[10px] text-white/40 uppercase tracking-[0.3em]">
+                {{ selectedProject.projectType }}
+              </p>
+              <h2 class="text-lg font-bold uppercase tracking-widest mt-1">
+                {{ selectedProject.title }}
+              </h2>
+            </div>
+
+            <!-- SLIDER -->
+            <div class="relative flex items-center justify-center rounded-xl overflow-hidden
+                        border border-white/20 bg-gradient-to-br from-black via-zinc-950 to-black
+                        shadow-[0_0_25px_rgba(255,255,255,0.08)]">
+
+              <img
+                :src="selectedProject.images[currentIndex]"
+                class="w-full max-h-[340px] object-contain transition duration-500 hover:scale-[1.02]"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40 pointer-events-none"></div>
+
+              <button
+                @click="prevImage"
+                class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center
+                       rounded-full border border-white/30 bg-black/60 backdrop-blur-md text-white
+                       hover:bg-white hover:text-black transition shadow-lg"
+              >
+                ‹
+              </button>
+
+              <button
+                @click="nextImage"
+                class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center
+                       rounded-full border border-white/30 bg-black/60 backdrop-blur-md text-white
+                       hover:bg-white hover:text-black transition shadow-lg"
+              >
+                ›
+              </button>
+
+            </div>
+
+            <!-- DOTS -->
+            <div class="flex justify-center gap-1">
+              <span
+                v-for="(img, i) in selectedProject.images"
+                :key="i"
+                class="h-2 w-2 rounded-full transition duration-300"
+                :class="i === currentIndex ? 'bg-white scale-125 shadow-md' : 'bg-white/20'"
+              ></span>
+            </div>
+
+            <!-- OVERVIEW -->
+            <p class="text-xs text-white/50 leading-relaxed">
+              {{ selectedProject.overview }}
+            </p>
+
+            <!-- TECH -->
+            <div class="flex flex-wrap gap-2">
+              <span
+                v-for="tech in selectedProject.tech"
+                :key="tech"
+                class="text-[10px] px-2 py-1 border border-white/10 text-white/60 rounded-md bg-white/5"
+              >
+                {{ tech }}
+              </span>
+            </div>
+
+            <div class="flex justify-end pt-2">
+              <button
+                @click="closeModal"
+                class="px-4 py-2 text-[10px] uppercase tracking-widest bg-white text-black rounded-full"
+              >
+                Close
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </Transition>
 
   </section>
 </template>
 
 <script setup>
 import { ref, computed } from "vue"
+import uktImg from "../assets/image/project-screenshots/ukt/ukt.webp"
+import uktImg2 from "../assets/image/project-screenshots/ukt/ukt2.jpg"
+import uktImg3 from "../assets/image/project-screenshots/ukt/ukt3.jpg"
+import uktImg4 from "../assets/image/project-screenshots/ukt/ukt4.jpg"
+import uktImg5 from "../assets/image/project-screenshots/ukt/ukt5.png"
+import uktImg6 from "../assets/image/project-screenshots/ukt/ukt6.png"
+import sciGamesImg from "../assets/image/project-screenshots/scigames/sciegames.webp"
+import sciGamesImg2 from "../assets/image/project-screenshots/scigames/scigames2.jpg"
 
-import uktImg from "../assets/image/ukt.webp"
-import sciGamesImg from "../assets/image/sciegames.webp"
-
-// DEFAULT CATEGORY (no "All")
 const categories = ["Website", "Promotions", "Logo", "UI/UX"]
-
 const selectedCategory = ref("Website")
+
+const isModalOpen = ref(false)
+const selectedProject = ref(null)
+const currentIndex = ref(0)
+
+const openProject = (project) => {
+  selectedProject.value = project
+  currentIndex.value = 0
+  isModalOpen.value = true
+}
+
+const closeModal = () => {
+  isModalOpen.value = false
+  selectedProject.value = null
+  currentIndex.value = 0
+}
+
+const nextImage = () => {
+  currentIndex.value =
+    (currentIndex.value + 1) % selectedProject.value.images.length
+}
+
+const prevImage = () => {
+  currentIndex.value =
+    (currentIndex.value - 1 + selectedProject.value.images.length) %
+    selectedProject.value.images.length
+}
 
 const projects = [
   {
-    title: "Ukt Website",
-    role: "Frontend Developer",
+    title: "University of Kratie Website",
+    projectType: "On-the-Job Project",
     status: "online",
     category: "Website",
-    image: uktImg,
-    tech: ["HTML", "CSS", "Bootstrap", "PHP", "MySQL"]
+    images: [uktImg, uktImg2, uktImg3, uktImg4, uktImg5, uktImg6],
+    tech: ["HTML", "CSS","JavaScript", "Bootstrap", "PHP", "MySQL"],
+    overview: "A university content management system (CMS) website with site settings that allow dynamic updates of colors, text, logo, and background for easy customization and management"
   },
   {
-    title: "SCI-GAMES App",
-    role: "System Programmer",
+    title: "SCI-GAMES Online Mobile Application",
+    projectType: "Capstone Project",
     status: "offline",
     category: "Website",
-    image: sciGamesImg,
-    tech: ["HTML", "CSS", "Bootstrap", "PHP"]
+    images: [sciGamesImg2, sciGamesImg],
+    tech: ["HTML", "CSS","JavaScript", "Bootstrap", "PHP", "MySQL", "Median.co"],
+    overview: "A web application capstone project for Grade 8 students of San Ildefonso National High School. It is a module-based science learning game system where gameplay depends on the content of the science modules and can be accessed on any device"
   }
 ]
 
-// FILTER LOGIC
-const filteredProjects = computed(() => {
-  return projects.filter(p => p.category === selectedCategory.value)
-})
+const filteredProjects = computed(() =>
+  projects.filter(p => p.category === selectedCategory.value)
+)
 </script>
+
+<style>
+.modal-enter-active,
+.modal-leave-active {
+  transition: all 0.2s ease;
+}
+.modal-enter-from {
+  opacity: 0;
+  transform: scale(0.96);
+}
+.modal-enter-to {
+  opacity: 1;
+  transform: scale(1);
+}
+.modal-leave-from {
+  opacity: 1;
+  transform: scale(1);
+}
+.modal-leave-to {
+  opacity: 0;
+  transform: scale(0.96);
+}
+</style>
