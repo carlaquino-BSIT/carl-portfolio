@@ -3,7 +3,7 @@
 
     <!-- HEADER -->
     <div class="mx-auto max-w-6xl px-5 lg:px-8 mb-10 sm:mb-12" data-aos="fade-up">
-      <p class="text-[10px] uppercase tracking-[0.35em] text-white/50 font-mono">
+      <p class="text-[10px] uppercase tracking-[0.35em] text-white/50">
         Who I Am
       </p>
 
