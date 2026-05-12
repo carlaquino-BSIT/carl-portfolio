@@ -142,7 +142,7 @@
 
         <div
           class="w-full max-w-xl bg-black border border-white/10 rounded-xl overflow-hidden"
-          data-aos="fade-up"
+        
         >
 
           <!-- HEADER -->
