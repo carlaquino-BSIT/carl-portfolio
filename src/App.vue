@@ -3,6 +3,7 @@
 
     <Navbar />
     <Hero />
+    <About />
     <SkillsSection />
     <TechStackSection />
     <Experience />
@@ -26,5 +27,6 @@ import Contact from './components/contact.vue';
 import WebsiteFooter from './components/websiteFooter.vue';
 import Gallery from './components/gallery.vue';
 import scrollonTop from './components/scroll.vue';
+import About from './components/about.vue';
 
 </script>
