@@ -41,7 +41,7 @@
           ></div>
 
           <p
-            class="mb-2 text-[11px] sm:text-xs font-mono text-white/40"
+            class="mb-2 text-[11px] sm:text-xs text-white/40"
           >
             {{ item.year }}
           </p>
@@ -99,7 +99,7 @@
           </p>
 
           <p
-            class="mt-1 text-[11px] font-mono text-white/40"
+            class="mt-1 text-[11px] text-white/40"
           >
             {{ item.year }}
           </p>
@@ -137,7 +137,7 @@
               </p>
 
               <p
-                class="mt-1 text-xs font-mono text-white/40"
+                class="mt-1 text-xs text-white/40"
               >
                 {{ item.year }}
               </p>
@@ -168,7 +168,7 @@
               </p>
 
               <p
-                class="mt-1 text-xs font-mono text-white/40"
+                class="mt-1 text-xs  text-white/40"
               >
                 {{ item.year }}
               </p>
@@ -208,12 +208,12 @@ const experience = [
 
 const education = [
   {
-    title: "Bachelor of Science in Information Technology (BSIT)",
+    title: "Bachelor of Science in Information Technology",
     place: "Bulacan Agricultural State College",
     year: "2021 - 2025",
   },
   {
-    title: "Senior High School – Information and Communication Technology (ICT)",
+    title: "Senior High – ICT",
     place: "San Miguel National High School",
     year: "2018 - 2020",
   },
