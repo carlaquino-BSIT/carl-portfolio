@@ -252,7 +252,7 @@ import { ref, computed, onMounted } from "vue"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
-import uktImg from "../assets/image/project-screenshots/ukt/ukt.webp"
+import uktImg from "../assets/image/project-screenshots/ukt/ukt1.jpg"
 import sciGamesImg from "../assets/image/project-screenshots/scigames/scigames2.jpg"
 
 onMounted(() => {
