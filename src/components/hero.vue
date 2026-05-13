@@ -36,13 +36,13 @@
         </p>
 
         <!-- TAGS -->
-        <div class="mb-8 sm:mb-10 flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3">
+        <!-- <div class="mb-8 sm:mb-10 flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3">
           <div v-for="(tag, index) in tags" :key="tag"
             class="rounded-full border border-white/10 bg-white/[0.02] px-3 sm:px-4 py-1.5 sm:py-2 text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.22em] transition hover:bg-white hover:text-black"
             data-aos="zoom-in" :data-aos-delay="index * 80">
             {{ tag }}
           </div>
-        </div>
+        </div> -->
 
         <!-- ACTIONS -->
         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3" data-aos="fade-up"
@@ -54,7 +54,7 @@
             <i class="ri-arrow-right-up-line transition group-hover:translate-x-1" />
           </button>
 
-          <a href="mailto:carlangeloaquino2502@gmail.com"
+          <a href="mailto:your-email@example.com"
             class="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.02] text-base sm:text-lg transition hover:-translate-y-1 hover:bg-white hover:text-black">
             <i class="ri-mail-line"></i>
           </a>
@@ -96,7 +96,7 @@ onMounted(() => {
   })
 })
 
-const tags = ["Frontend Developer", "System Programmer", "Multimedia Editor"]
+// const tags = ["Frontend Developer", "System Programmer", "Multimedia Editor"]
 
 // FUNCTION TO SCROLL TO PROJECTS
 const scrollToProjects = () => {
